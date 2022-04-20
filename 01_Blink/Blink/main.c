@@ -12,7 +12,7 @@
 
 int main(void)
 {
-    DDRB  |= (1 << DDB5);
+    DDRB  |= (1 << DDB5);  // Data Direction Register (BCD) Bit gesetzt bedeutet -> Ausgang
 	
     PORTB |= 1 << PORTB5;
     while (1)

@@ -4,4 +4,8 @@ $repeat 2000000
     #20
     PIND = 0x0
     #20
+	PIND |= 0x08
+    #20
+    PIND = 0x0
+    #20
 $endrep
