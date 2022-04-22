@@ -33,11 +33,11 @@ int main(void)
 	DDRB = 0xFF;
 	PORTB = 0;
 
-	// Set the Timer Mode to CTC
+	// Set the Timer 0 Mode to CTC
 	TCCR0A |= (1 << WGM01);
 
 	// Set the value that you want to count to
-	OCR0A = 70; // Kammerton A
+	OCR0A = 70; // Kammerton A  Wert bis zu dem hochgezählt wird 16_000_00 / Prescaler / (Frq*2) - 1 
 	//OCR0A = 117; // ...und C
 
 	TIMSK0 |= (1 << OCIE0A);    //Set the ISR COMPA vect

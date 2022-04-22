@@ -15,10 +15,10 @@
 
 int main(void)
 {
-    DDRD = 0b00001100;
-	SET_BIT(DDRB, DDB5);
-	PORTD = 0b00001100;
-	PORTB &= ~(1 << PORTB5);
+    DDRD = 0b00000000;  // Alle pins auf Port D auf Eingang
+	SET_BIT(DDRB, DDB5); // fuenften Pin von Port B auf Aúsgabe
+	PORTD = 0b00001100; // Pull Up auf Pins D2 und D3
+	PORTB &= ~(1 << PORTB5); // Build in LED ausgeschaltet
 	
     while (1) 
     {
